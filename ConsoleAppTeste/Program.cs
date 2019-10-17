@@ -49,3 +49,33 @@ namespace ConsoleAppTeste
         public string estoque;
     }
 }
+
+/*
+ <?php
+require_once ("BD_Produto.php");
+require_once ("Produto.php");
+$banco = new BDConexao();
+$conn = $banco->getConexao();
+$sql = "SELECT * FROM produto";
+$result = $conn->query($sql);
+$resposta = array();
+$quantidade = 0;
+while ($linha = mysqli_fetch_array($result)) {
+	$quantidade = $quantidade+1;;
+    $item=array(
+    "id" => $linha["id"],
+    "nome" => $linha["nome"],
+    "descricao" => $linha["descricao"],
+    "categoria" => $linha["categoria"],
+    "subcategoria" => $linha["subcategoria"],
+    "valor" => $linha["valor"],
+    "img" => $linha["img"],
+    "estabelecimento_id" => $linha["estabelecimento_id"],
+    "estoque" => $linha["estoque"],
+    ); 
+    array_push($resposta, $item);
+}		
+http_response_code(200);
+echo json_encode($resposta);
+?>
+*/
